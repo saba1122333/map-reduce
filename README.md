@@ -10,7 +10,7 @@ No affiliation with MIT/CSAIL; this is for educational use only.
 ## Repo layout
 - `main/mr/`: Coordinator/worker/RPC logic
 - `main/mrapps/`: MapReduce app plugins (e.g., `wc.go`, `indexer.go`)
-- `main/test_files/`: Input texts (public domain Project Gutenberg files)
+- `main/test-files/`: Input texts (public domain Project Gutenberg files)
 - `main/test-script/`: End-to-end test harness (`test-mr.sh`)
 
 ## Requirements
