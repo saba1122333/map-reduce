@@ -1,2 +1,5 @@
 mr-tmp
-*.so
+*.so 
+*.out
+*.exe
+*.o

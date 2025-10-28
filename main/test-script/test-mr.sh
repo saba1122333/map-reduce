@@ -25,7 +25,7 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 MAIN_DIR="$REPO_ROOT/main"
 MR_DIR="$MAIN_DIR/mr"
 MRAPPS_DIR="$MAIN_DIR/mrapps"
-TEST_FILES_DIR="$MAIN_DIR/test_files"
+TEST_FILES_DIR="$MAIN_DIR/test-files"
 
 ISQUIET=$1
 maybe_quiet() {
@@ -337,11 +337,13 @@ else
   failed_any=1
 fi
 
+(cd "$MRAPPS_DIR" && rm -f *.so)
+rm -f "$MAIN_DIR/mrcoordinator" "$MAIN_DIR/mrworker" "$MAIN_DIR/mrsequential"
 #########################################################
 if [ $failed_any -eq 0 ]; then
     echo '***' PASSED ALL TESTS
 else
     echo '***' FAILED SOME TESTS
     exit 1
-    
+
 fi
